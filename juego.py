@@ -16,7 +16,13 @@ class Personaje(pygame.sprite.Sprite):
     def stop(self):
 
 class Plataforma(pygame.sprite.Sprite):
-    def __init__(self):
+    def __init__(self, alto, largo):
+        super().__init__()
+
+        self.image = pygame.surface((largo, alto))
+        self.image.fill((0,255,0))
+
+        self.rect = self.image.get_rect()
 
 #-----Funciones-------
 
